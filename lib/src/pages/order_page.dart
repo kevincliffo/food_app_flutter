@@ -12,17 +12,7 @@ class _OrderPageState extends State<OrderPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title:Text(
-          "Your Food cart", 
-          style:TextStyle(
-            color:Colors.black,
-            )
-          ),
-        centerTitle: true,
-        backgroundColor: Colors.white,
-        elevation:0.0,
-      ),
+      backgroundColor: Colors.white,
       body: ListView(
         padding: EdgeInsets.symmetric(horizontal:10.0),
         scrollDirection: Axis.vertical,

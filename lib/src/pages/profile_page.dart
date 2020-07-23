@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/src/widgets/custom_list_tile.dart';
+import 'package:food_app/src/widgets/small_button.dart';
 
 class ProfilePage extends StatefulWidget{
   _ProfilePageState createState()=> _ProfilePageState();
@@ -13,9 +14,10 @@ class _ProfilePageState extends State<ProfilePage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body:SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.symmetric(vertical:50.0, horizontal:20.0),
+          padding: EdgeInsets.symmetric(horizontal:20.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children:<Widget>[
@@ -43,7 +45,7 @@ class _ProfilePageState extends State<ProfilePage>
                         ),
                       ],
                       image:DecorationImage(
-                        image: AssetImage("assets/images/coffee-cup.png"),
+                        image: AssetImage("assets/images/breakfast.jpeg"),
                         fit:BoxFit.cover,
                       ),
                     ),
@@ -56,25 +58,7 @@ class _ProfilePageState extends State<ProfilePage>
                     SizedBox(height:10.0),
                     Text("0724113312", style:TextStyle(color: Colors.grey)),
                     SizedBox(height:10.0),
-                    Container(
-                      height:25.0,
-                      width:60.0,
-                      decoration: BoxDecoration(
-                        border:Border.all(
-                          color:Colors.blue,
-                        ),
-                        borderRadius:BorderRadius.circular(20.0)
-                      ),
-                      child:Center(
-                        child:Text(
-                          "Edit", 
-                          style:TextStyle(
-                            color:Colors.blue,
-                            fontSize:16.0,
-                          )
-                        ),
-                      ),
-                    ),
+                    SmallButton(btnText:"Edit"),
                   ],
                 ),
               ],
@@ -149,7 +133,7 @@ class _ProfilePageState extends State<ProfilePage>
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           Text(
-                            "Location Tracker"
+                            "Location Tracking"
                           ),
                           Switch(
                             value: turnOnLocation, 
